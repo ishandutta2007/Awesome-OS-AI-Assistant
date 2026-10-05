@@ -61,7 +61,7 @@ This repository tracks notable **commercial OS AI assistants** and **open-source
 
 ## 🔓 Open-Source GitHub Projects
 
-| 📦 Project | ⭐ Stars | ⚡ Description & Features |
+| 📦 Project | ⭐ GitHub_Stars | ⚡ Description & Features |
 | :--- | :--- | :--- |
 | **[Home Assistant](https://github.com/home-assistant/core)** | [![Home Assistant Stars](https://img.shields.io/github/stars/home-assistant/core?style=social&color=white)](https://github.com/home-assistant/core/stargazers) | **Home Assistant's native voice assistant (Assist)** — Open-source home automation platform supporting 50+ languages with wake word detection, STT, intent recognition, and TTS pipelines. |
 | **[Open Interpreter](https://github.com/OpenInterpreter/open-interpreter)** | [![Open Interpreter Stars](https://img.shields.io/github/stars/OpenInterpreter/open-interpreter?style=social&color=white)](https://github.com/OpenInterpreter/open-interpreter/stargazers) | **Natural language interface for your computer's OS** — Lets LLMs run code locally (Python, JS, Shell) to control your OS, edit photos, control browser, and manage files. |
