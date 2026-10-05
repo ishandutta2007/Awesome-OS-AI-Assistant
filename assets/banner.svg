@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 54px; fill: url(#titleGrad); }
+    .subtitle { font-family: system-ui, -apple-system, sans-serif; font-weight: 500; font-size: 22px; fill: #cbd5e1; letter-spacing: 1px; }
+    .tagline { font-family: system-ui, -apple-system, sans-serif; font-weight: 400; font-size: 16px; fill: #94a3b8; }
+    .pulse-circle { animation: pulse 4s ease-in-out infinite alternate; transform-origin: center; }
+    .wave-line { animation: float 6s ease-in-out infinite alternate; }
+    .grid-line { stroke: #334155; stroke-width: 0.5; stroke-opacity: 0.4; }
+    
+    @keyframes pulse {
+      0% { transform: scale(0.95); opacity: 0.4; }
+      100% { transform: scale(1.05); opacity: 0.8; }
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-10px); }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Background Animated Wave Elements (Kept behind foreground text) -->
+  <g class="wave-line" opacity="0.3">
+    <path d="M 0 180 Q 300 80 600 180 T 1200 180" fill="none" stroke="#6366f1" stroke-width="2" />
+    <path d="M 0 220 Q 300 320 600 220 T 1200 220" fill="none" stroke="#a855f7" stroke-width="1.5" />
+  </g>
+
+  <!-- Dynamic Animated Circles (Pulsing in background) -->
+  <circle cx="1000" cy="180" r="140" fill="url(#accentGrad)" class="pulse-circle" filter="url(#glow)" />
+  <circle cx="150" cy="90" r="90" fill="url(#accentGrad)" class="pulse-circle" filter="url(#glow)" />
+
+  <!-- Decorative Grid Overlay -->
+  <g opacity="0.2">
+    <line x1="100" y1="0" x2="100" y2="360" class="grid-line" />
+    <line x1="300" y1="0" x2="300" y2="360" class="grid-line" />
+    <line x1="500" y1="0" x2="500" y2="360" class="grid-line" />
+    <line x1="700" y1="0" x2="700" y2="360" class="grid-line" />
+    <line x1="900" y1="0" x2="900" y2="360" class="grid-line" />
+    <line x1="1100" y1="0" x2="1100" y2="360" class="grid-line" />
+  </g>
+
+  <!-- Foreground Content (Crisp, highly readable title & subtitle) -->
+  <g transform="translate(80, 140)">
+    <!-- Category Badge -->
+    <rect x="0" y="-85" width="280" height="34" rx="17" fill="#1e293b" stroke="#475569" stroke-width="1" />
+    <text x="14" y="-63" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#38bdf8">🤖 AWESOME OS AI ASSISTANTS</text>
+
+    <!-- Main Title -->
+    <text x="0" y="0" class="title">Awesome OS AI Assistant</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="42" class="subtitle">Voice-First OS Control, Local-First AI &amp; Privacy-Respecting Desktop Automation</text>
+
+    <!-- Sub-tagline -->
+    <text x="0" y="80" class="tagline">Curated Directory of Open-Source Projects &amp; Commercial SaaS Ecosystems • 2026 Edition</text>
+  </g>
+</svg>
